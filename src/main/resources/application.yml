@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5332/barbershop
+    username: server
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+      show_sql: true
+  main:
+    web-application-type: servlet
+
